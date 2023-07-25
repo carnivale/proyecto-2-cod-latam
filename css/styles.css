@@ -1,0 +1,273 @@
+/* En este archivo escriban su CSS */
+
+/* Fonts */
+/* Importar aquí la font */
+
+/* Aquí les dejamos como ayuda este "reset" en el cual ajustamos algunas propiedades
+*  cuyos valores asigna por defecto el navegador.
+*/
+
+/* Reset */
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    /* Para que el scrolleo en la one page sea suave */
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    background-color: #fbfbfb;
+    font-size: 18px;
+    line-height: 1.2;
+    color: #0f0f0f;
+}
+
+header {
+    background-color: #fbfbfb;
+    height: 90px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    padding: 20px;
+    width: 100%;
+    top: 0;
+    left: 0;
+    box-shadow: 0 4px 12px 5px grey;
+}
+
+.logo{
+    width: 50px;
+    top: 5px;
+    margin-left: 5px;  
+}
+ 
+ 
+
+/* Para quitar los puntos a los items de listas */
+ul {
+    list-style: none;
+}
+
+/* Para que los enlaces hereden el color de texto y no tengan subrayado */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.menu{
+    display: flex;
+    font-size: 22px;
+}
+
+li.item-menu a {
+    padding: 16px;
+    display: inline-block;
+}
+li.item-menu:hover,
+li.item-menu a.active
+    {
+    background: rgba(240, 149, 12, 0.3);
+    transition: background-color 0.3s;
+
+}
+img {
+    max-width: 100%;
+}
+
+
+.foto-perfil {
+    width: 300px;
+    height:300px;
+    border-radius: 100%;
+    padding: 0 20px;
+   
+}
+
+main {
+    max-width: 1200px;
+    margin: auto;
+}
+
+#inicio{
+    padding-top:  130px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.seccion_1{
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+}
+
+h1{
+    font-size: 36px;
+    padding: 15px;  
+    margin: 1.5rem 0;
+    text-align: center;
+
+}
+
+.quien_soy {
+    padding: 20px;
+    margin: 20px 0;
+    text-align: center;
+}
+
+.boton-cv {
+    background-color: orange;
+    font-size: 20px ;
+    color: #fbfbfb;
+    padding: 20px;
+    border-radius: 30px;
+    margin: 20px;
+}
+
+.hablemos{
+    background-color: rgba(255, 255, 0, 0.457);
+    border-radius: 10px;
+    width: 90%;
+    max-width: 800px;
+    text-align: center;
+    margin: auto;
+}   
+
+h2 {
+    padding-bottom: 20px;
+    margin-top: 200px;
+}
+
+p {
+    margin: 20px 0;
+    padding: 20px;
+}
+
+.icono {
+    width: 70px;
+    height: 70px;
+}
+
+.iconos-contactos{
+    margin: 100px 0; 
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+footer{
+    height: 90px;
+    background-color: rgba(255, 68, 0, 0.708);
+    color: #fbfbfb;
+    text-align: center; 
+    justify-content: center;
+    align-items: center;
+}
+
+/* The switch - the box around the slider */
+.switch {
+    display: block;
+    --width-of-switch: 3.0em;
+    --height-of-switch: 2em;
+    /* tamaño del icono del control deslizante -- sol y luna */
+    --size-of-icon: 1.0em;
+    /* it is like a inline-padding of switch */
+    --slider-offset: 0.3em;
+    position: relative;
+    width: var(--width-of-switch);
+    height: var(--height-of-switch);
+  }
+  
+  /* Hide default HTML checkbox */
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  /* The slider */
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #f4f4f5;
+    transition: .4s;
+    border-radius: 30px;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: var(--size-of-icon,1.4em);
+    width: var(--size-of-icon,1.4em);
+    border-radius: 20px;
+    left: var(--slider-offset,0.3em);
+    top: 50%;
+    transform: translateY(-50%);
+    background: linear-gradient(40deg,#ff0080,#ff8c00 70%);
+    
+   transition: .4s;
+  }
+  
+  input:checked + .slider {
+    background-color: #303136;
+  }
+  
+  input:checked + .slider:before {
+    left: calc(100% - (var(--size-of-icon,1.4em) + var(--slider-offset,0.3em)));
+    background: #303136;
+    /* change the value of second inset in box-shadow to change the angle and direction of the moon  */
+    box-shadow: inset -3px -2px 5px -2px #8983f7, inset -10px -4px 0 0 #a3dafb;
+  }
+  
+
+@media(min-width: 1024px) {
+
+    
+    h1{
+        font-size: 48px;
+        text-align: left;
+    }
+
+    h2{
+        font-size: 32px;
+    }
+
+    #inicio{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    }
+    
+    .seccion_1{
+    
+    display: flex;
+    flex-direction: column;
+    align-items:flex-start;
+    padding-left: 10px;
+    margin-left: 20px;
+    width: 50%;
+    }   
+
+    .quien_soy{
+        text-align: left;
+        font-size: 25px;
+    }
+ 
+} 
+
+.dark-mode {
+    background-color: #252525;
+    color: #f2f2f2;
+
+}
